@@ -5,8 +5,8 @@ export enum apiConstants {
   USER_CHAT_LIST = 'users/{userId}/chats',
    // Endpoint for creating a new chat
   CREATE_CHAT = 'users/{userId}/chats',
-  // Endpoint for getting the details of a specific chat
-  USER_CHAT = 'users/{userId}/chats/{chatId}/details',
+  // Endpoint for getting all the conversation in one specific chat
+  USER_CHAT = 'users/{userId}/chats/{chatId}',
   // Endpoint for updating a chat         
   UPDATE_USER_CHAT = 'users/{userId}/chats/{chatId}',
   // Endpoint for deleting an entire user chat
