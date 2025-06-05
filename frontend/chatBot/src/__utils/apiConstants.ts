@@ -13,24 +13,20 @@ export enum apiConstants {
   DELETE_USER_CHAT = 'users/{userId}/chats/{chatId}',
   //under each chat, there are multiple user, ai messages, so each is a conversation. 
   // Endpoint for creating a new conversation in a specific chat
-  CHAT_CREATE_NEW_CONVERSATION = '/chats/{chatId}/conversations',
+  CHAT_CREATE_NEW_CONVERSATION = 'users/{userId}/chats/{chatId}/conversations',
   //to get list of conversations, we can get it from chatlist itslef, so no need to pass chatId in the URL
   //Endpoint for updating last conversation only in a chat
-  CHAT_UPDATE_LAST_CONVERSATION = 'users/{userId}/chats/{chatId}/conversations/last',
+  CHAT_UPDATE_LAST_CONVERSATION = 'users/{userId}/chats/{chatId}/conversations/{conversationId}',
   
-  CHAT_CONVERSATION_DETAILS = 'users/{userId}/chats/{chatId}/conversations/{conversationId}',
+  // CHAT_CONVERSATION_DETAILS = 'users/{userId}/chats/{chatId}/conversations/{conversationId}',
   // Endpoint for sending a message in a specific conversation
-  CHAT_SEND_MESSAGE = 'users/{userId}/chats/{chatId}/conversations/{conversationId}/message',
+  // CHAT_SEND_MESSAGE = 'users/{userId}/chats/{chatId}/conversations/{conversationId}/message',
   // Endpoint for getting the list of conversations for a specific user. will each user have unique chatid? 
     // If yes, then this endpoint will return conversations for that user, but no need to pass userId in the URL
   // If no, then this endpoint will return conversations for all users "'/chats/{chatId}/conversations'", and userId will be used to filter the results
   
   
   //what is difference between chats and conversations here? 
-   
-  
-  // Endpoint for getting the list of messages in a specific conversation
-  CHAT_MESSAGES = '/chats/{chatId}/conversations/{conversationId}/messages',
   // Endpoint for getting the list of users
   USERS = '/users',
   // Endpoint for getting the details of a specific user

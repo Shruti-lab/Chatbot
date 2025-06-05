@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import {
   DesktopOutlined,
   FileOutlined,
@@ -9,6 +9,8 @@ import {
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import UserInput from '../chat/UserInput';
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '../store/store';
 
 // import Chat from '../components/Chat';
 // import { useTranslation } from 'react-i18next';
@@ -64,6 +66,8 @@ const ChatContainer: React.FC = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  const dispatch = useDispatch<AppDispatch>();
 
   const messageSendHandler = (message:string)=>{
     setIsLoading(true);

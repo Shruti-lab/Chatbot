@@ -9,3 +9,11 @@ export const store = configureStore({
     getDefaultMiddleware().concat(yourMiddleware),
     devTools: process.env.NODE_ENV !== 'production'
 })
+
+export type RootState = ReturnType<typeof store.getState>;
+export default store;
+export type AppDispatch = typeof store.dispatch;
+export const yourMiddleware = (storeAPI: any) => (next: any) => (action: any) => {
+    // Custom middleware logic here
+    return next(action);
+}

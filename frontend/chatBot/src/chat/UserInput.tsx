@@ -7,6 +7,8 @@ interface UserInputProps {
   isDisabled: boolean;
   placeholder?: string;
 }
+
+
 const UserInput: React.FC<UserInputProps> = ({
     onSendMessage,
     isLoading,
